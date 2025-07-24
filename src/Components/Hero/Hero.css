@@ -1,0 +1,128 @@
+.pro-container {
+  width: 200px;
+  height: 200px;
+  padding: 7px;
+  border-radius: 50%;
+  background: conic-gradient(#b415ff, #a03bff, #df8908, #b415ff, #df8908);
+  background-size: 200%;
+  justify-content: center;
+  animation: rotate 4s linear infinite, glow 2s ease-in-out infinite;
+  z-index: 1;
+  box-shadow: 0 0 10px #b415ff, 0 0 30px #b415ff, 0 0 50px #df8908;
+}
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 10px #b415ff, 0 0 30px #b415ff, 0 0 50px #df8908;
+  }
+  50% {
+    box-shadow: 0 0 20px #b415ff, 0 0 50px #b415ff, 0 0 70px #df8908;
+  }
+}
+.profile-wr {
+  margin-top: 80px;
+}
+.pro-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: rotate1;
+}
+@keyframes rotate {
+  to {
+    background-position: 200%;
+  }
+}
+.hero {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 35px;
+}
+.hero h1 {
+  text-align: center;
+  width: 70%;
+  font-size: 50px;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+.hero h1 span {
+  background: linear-gradient(270deg, #df8908 10%, #b415ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero p {
+  width: 50%;
+  text-align: center;
+  font-size: 18px;
+  line-height: 40px;
+}
+.hero-section {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+.hero-connect {
+  padding: 13px 30px;
+  border-radius: 50px;
+  background: linear-gradient(264deg, #df8908 -5.09%, #b415ff 106.28%);
+  cursor: pointer;
+}
+.hero-resume{
+   padding: 13px 50px;
+   border-radius: 50px;
+   border: 2px solid #fff;
+   cursor: pointer;
+}
+.hero-connect:hover{
+   border: 2px solid white;
+}
+.hero-resume:hover{
+   border-color: #b415ff;
+}
+
+@media(max-width:768px){
+  .hero h1{
+    margin-top: 50px;
+    width: 90%;
+    font-size: 30px;
+  }
+  .hero p{
+    width: 60%;
+    font-size: 15px;
+    line-height: 32px;
+    margin: 10px 0px;
+  }
+  .hero-action{
+    gap: 16px;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 480px) {
+  .pro-container {
+    width: 120px;
+    height: 120px;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .hero-connect,
+  .hero-resume {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
